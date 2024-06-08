@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+        h1 {
+            color: #007bff;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        .btn-custom {
+            margin: 10px;
+            padding: 15px 25px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .btn-custom:hover {
+            transform: scale(1.05);
+        }
+        .rainbow-btns a:nth-child(1) {
+            background-color: #ff0000;
+        }
+        .rainbow-btns a:nth-child(2) {
+            background-color: #ff7f00;
+        }
+        .rainbow-btns a:nth-child(3) {
+            background-color: #ffff00;
+        }
+        .rainbow-btns a:nth-child(4) {
+            background-color: #00ff00;
+        }
+        .rainbow-btns a:nth-child(5) {
+            background-color: #0000ff;
+        }
+        .rainbow-btns a:nth-child(6) {
+            background-color: #8b00ff;
+        }
+        .rainbow-btns a {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ADMINISTRADOR GESTOR</h1>
+        <div class="d-grid gap-2 d-md-block rainbow-btns">
+            <a href="/coordinador/form" class="btn btn-custom">Registrar Coordinador</a>
+            <a href="/estudiante/form" class="btn btn-custom">Registrar Estudiante</a>
+            <a href="/profesor/form" class="btn btn-custom">Registrar Profesor</a>
+            <a href="/coordinador" class="btn btn-custom">Ver Coordinadores</a>
+            <a href="/estudiante" class="btn btn-custom">Ver Estudiantes</a>
+            <a href="/profesor" class="btn btn-custom">Ver Profesores</a>
+        </div>
+		
+		<a href="/" class="btn-back">cerrar sesion</a>
+    </div>
+
+	
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
