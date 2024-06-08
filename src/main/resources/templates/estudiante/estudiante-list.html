@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Alumnos</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+	<style>
+	       body {
+	           font-family: Arial, sans-serif;
+	           background-color: #f4f4f4;
+	           display: flex;
+	           justify-content: center;
+	           align-items: center;
+	           height: 100vh;
+	           margin: 0;
+	       }
+	       .container {
+	           background-color: #fff;
+	           padding: 20px;
+	           border-radius: 8px;
+	           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	           width: 80%;
+	           max-width: 800px;
+	       }
+	       h1 {
+	           text-align: center;
+	           color: #333;
+	       }
+	       table {
+	           width: 100%;
+	           border-collapse: collapse;
+	           margin-top: 20px;
+	       }
+	       th, td {
+	           padding: 10px;
+	           border: 1px solid #ddd;
+	           text-align: left;
+	       }
+	       th {
+	           background-color: #f2f2f2;
+	       }
+	       .btn-back {
+	           display: inline-block;
+	           margin-top: 20px;
+	           padding: 10px 20px;
+	           background-color: #007bff;
+	           color: #fff;
+	           text-decoration: none;
+	           border-radius: 4px;
+	       }
+	       .btn-back:hover {
+	           background-color: #0056b3;
+	       }
+	   </style>
+</head>
+<body>
+	<div class="container">
+	        <h1>Lista de Estudiantes</h1>
+	        <table>
+	            <thead>
+	                <tr>
+	                    <th>ID</th>
+	                    <th>Nombre</th>
+	                    <th>Facultad</th>
+	                </tr>
+	            </thead>
+	            <tbody>
+	                <tr th:each="estudiante : ${estudiantes}">
+	                    <td th:text="${estudiante.id}"></td>
+	                    <td th:text="${estudiante.nombre}"></td>
+	                    <td th:text="${estudiante.proyecto}"></td>
+	                </tr>
+	            </tbody>
+	        </table>
+        <a href="/admin" class="btn-back">Regresar al Inicio</a>
+    </div>
+</body>
+</html>
